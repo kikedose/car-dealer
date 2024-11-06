@@ -37,6 +37,16 @@ export default async function Page({
     `${BASE_URL}/${ENDPOINT_URL}`
   );
 
+  if (vehicles.length === 0) {
+    return (
+      <main className="grid place-items-center w-full h-screen">
+        <h2 className="scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight first:mt-0">
+          No results found :(
+        </h2>
+      </main>
+    )
+  }
+
   return (
     <main className="grid place-items-center w-full h-screen">
       <Suspense fallback={<h1>This suspense is pointless, the data is fetched in the server...</h1>}>
