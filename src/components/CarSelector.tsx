@@ -39,7 +39,7 @@ export default function CarSelector({ vehicles }: CarSelectorProps) {
         <span className="text-blue-300 font-bold">Brand</span>
         <span className="text-red-600">*</span>
 
-        <Select value={selectedCar} onValueChange={setSelectedCar}>
+        <Select value={selectedCar ?? undefined} onValueChange={setSelectedCar}>
           <SelectTrigger className="w-[180px]">
             <SelectValue placeholder="Select a car" />
           </SelectTrigger>
@@ -60,7 +60,7 @@ export default function CarSelector({ vehicles }: CarSelectorProps) {
         <span className="text-blue-300 font-bold">Year</span>
         <span className="text-red-600">*</span>
 
-        <Select value={selectedYear} onValueChange={setSelectedYear}>
+        <Select value={selectedYear ?? undefined} onValueChange={setSelectedYear}>
           <SelectTrigger className="w-[180px]">
             <SelectValue placeholder="Select a model" />
           </SelectTrigger>
