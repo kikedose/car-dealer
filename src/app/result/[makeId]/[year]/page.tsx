@@ -12,10 +12,10 @@ export function generateStaticParams() {
 const BASE_URL = process.env.BASE_URL;
 
 interface Car {
-  Make_ID: number,
-  Make_Name: string,
-  Model_ID: number,
-  Model_Name: string,
+  Make_ID: number;
+  Make_Name: string;
+  Model_ID: number;
+  Model_Name: string;
 }
 
 interface ApiResponse {
@@ -44,17 +44,25 @@ export default async function Page({
           No results found :(
         </h2>
       </main>
-    )
+    );
   }
 
   return (
     <main className="grid place-items-center w-full h-screen">
-      <Suspense fallback={<h1>This suspense is pointless, the data is fetched in the server...</h1>}>
+      <Suspense
+        fallback={
+          <h1>
+            This suspense is pointless, the data is fetched in the server...
+          </h1>
+        }
+      >
         <div>
-          <h1 className="py-8 text-blue-300 scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">{vehicles[0].Make_Name}</h1>
-          <ul className='pl-16'>
+          <h1 className="py-8 text-blue-300 scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
+            {vehicles[0].Make_Name}
+          </h1>
+          <ul className="pl-16">
             {vehicles?.map((vehicle) => (
-              <li key={vehicle.Model_ID} className='list-disc'>
+              <li key={vehicle.Model_ID} className="list-disc">
                 {vehicle.Model_Name}
               </li>
             ))}

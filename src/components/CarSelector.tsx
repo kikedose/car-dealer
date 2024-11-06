@@ -34,9 +34,10 @@ export default function CarSelector({ vehicles }: CarSelectorProps) {
   const [selectedYear, setSelectedYear] = useState<string | null>(null);
 
   return (
-    <div className='flex flex-col gap-8'>
+    <div className="flex flex-col gap-8">
       <Label>
-        <span className='text-blue-300 font-bold'>Brand</span><span className='text-red-600'>*</span>
+        <span className="text-blue-300 font-bold">Brand</span>
+        <span className="text-red-600">*</span>
 
         <Select value={selectedCar} onValueChange={setSelectedCar}>
           <SelectTrigger className="w-[180px]">
@@ -56,7 +57,8 @@ export default function CarSelector({ vehicles }: CarSelectorProps) {
       </Label>
 
       <Label>
-        <span className='text-blue-300 font-bold'>Year</span><span className='text-red-600'>*</span>
+        <span className="text-blue-300 font-bold">Year</span>
+        <span className="text-red-600">*</span>
 
         <Select value={selectedYear} onValueChange={setSelectedYear}>
           <SelectTrigger className="w-[180px]">

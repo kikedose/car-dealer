@@ -31,19 +31,17 @@ export default async function Home() {
   });
 
   return (
-    <main className='w-full h-screen flex flex-col sm:flex-row'>
-      <div className='h-auto w-full sm:h-full sm:w-1/2 p-8 grid place-items-center'>
+    <main className="w-full h-screen flex flex-col sm:flex-row">
+      <div className="h-auto w-full sm:h-full sm:w-1/2 p-8 grid place-items-center">
         <div>
           <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl py-4">
-            Welcome to DevelOps' Vehicle Database!
+            Welcome to DevelOps&rsquo; Vehicle Database!
           </h1>
-          <p>
-            Let's get started by selecting a brand and a model...
-          </p>
+          <p>Let&rsquo;s get started by selecting a brand and a model...</p>
         </div>
       </div>
 
-      <div className='h-auto w-full sm:h-full sm:w-1/2 p-8 grid place-items-center'>
+      <div className="h-auto w-full sm:h-full sm:w-1/2 p-8 grid place-items-center">
         <div>
           <CarSelector vehicles={sortedVehicles} />
         </div>
