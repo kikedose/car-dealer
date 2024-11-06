@@ -28,7 +28,7 @@ interface ApiResponse {
 export default async function Page({
   params,
 }: {
-  params: { makeId: string; year: string };
+  params: Promise<{ makeId: string; year: string }>;
 }) {
   const { makeId, year } = await params; // ignore LSP, this *must* be awaited as per docs
   const ENDPOINT_URL = `GetModelsForMakeIdYear/makeId/${makeId}/modelyear/${year}?format=json`;
